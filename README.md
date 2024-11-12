@@ -4,7 +4,7 @@ Infrastructure as Code (IAC) to Deploy Nifi2 on GCP
 > Credits:- This is Forked from [hdfs-to-gcs](https://github.com/GoogleCloudPlatform/hdfs-to-gcs/tree/main) contributed by mandeeptrehan Mandeep Singh Bawa
 
 
-Below scripts provision required resources for Hdfs to GCS solution on GCP. Use these instruction only when you can not have external IP and Internet access on the VMs. Note that in this deployment only a single user is authenticated by login with username and password in the UI. This feature supports a minimal amount of attempts for security and is not recommended. 
+Below scripts provision required resources for deploying NiFi2 on GCP. This deployment does not need internet access on the VM, neither external IPs. Note that in this deployment only a single user is authenticated by login with username and password in the UI. This feature supports a minimal amount of attempts for security and is not recommended. 
 - provider.tf: specifies "google" as the cloud environment, the project and region where the solution is deployed and the path for service account credential file. 
 - nifi.tf: provisioning a cluster of Ubuntu based GCP compute instances with NIFI installed and launched.
 - nifi-ca.tf: provisioning a Certitficate Authority server which certifies NIFI cluster instances and bastion host machine
