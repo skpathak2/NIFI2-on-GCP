@@ -3,7 +3,6 @@ Infrastructure as Code (IAC) to Deploy Nifi2 on GCP
 
 > Credits:- This is Forked from [hdfs-to-gcs](https://github.com/GoogleCloudPlatform/hdfs-to-gcs/tree/main) contributed by mandeeptrehan Mandeep Singh Bawa
 
-
 Below scripts provision required resources for deploying NiFi2 on GCP. This deployment does not need internet access on the VM, neither external IPs. Note that in this deployment only a single user is authenticated by login with username and password in the UI. This feature supports a minimal amount of attempts for security and is not recommended. 
 - provider.tf: specifies "google" as the cloud environment, the project and region where the solution is deployed and the path for service account credential file. 
 - nifi.tf: provisioning a cluster of Ubuntu based GCP compute instances with NIFI installed and launched.
@@ -20,7 +19,7 @@ In order to deploy this solution, follow the below steps:
 1. Clone this project in your local machine and go to "nifi2-gcp" folder. We are assuming you have terraform (tested with Terraform v0.13.6) is installed in your local machine or use the google cloud shell which comes with terraform.
 ```
 git clone https://github.com/skpathak2/nifi2-gcp
-cd hdfs-to-gcs/nifi2-gcp/terraform
+cd /nifi2-gcp/terraform
 gcloud config set project PROJECT_ID
 ```
 2. Modify the credential variable in provider.tf to the path to your service account credential file (*.json). ([How to create service account credential key](https://cloud.google.com/iam/docs/creating-managing-service-account-keys#creating))
