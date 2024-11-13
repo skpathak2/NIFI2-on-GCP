@@ -42,10 +42,9 @@ bash ./run.sh  "bucket_name"
    - You can also use SSH with IAP's TCP forwarding feature wraps an SSH connection inside HTTPS. Learn more from this [link](https://cloud.google.com/iap/docs/using-tcp-forwarding#tunneling_with_ssh).
      example command
      ```
-     gcloud compute start-iap-tunnel nifi-1 8443 \
-    --local-host-port=nifi-1:8443 \
-    --zone=us-central1-a
+     gcloud compute start-iap-tunnel nifi-1 8443 --local-host-port=nifi-1:8443 --zone=us-central1-a
      ```
+     
 2. Connect to the bastion host VM and follow below steps to open NIFI web interface.
    
 3. Open URL "https://nifi-1:8443/nifi" in a browser and use the username and password values from variable.tf to login.
